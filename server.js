@@ -41,6 +41,7 @@ app.post('/signup', async (req, res) => {
     // Send email with group link
     const mailOptions = {
       from: process.env.EMAIL_USER,
+      
       to: email,
       subject: 'Welcome to the Trybe_X Community!',
       html: 
