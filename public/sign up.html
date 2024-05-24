@@ -12,25 +12,7 @@
 
     <style>
       /* Styles for the response message */
-      .google-form-container {
-            position: relative;
-            width: 100%;
-            height: 800px; /* Adjust based on the height of your form */
-        }
-        .google-form-container iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-        .hidden-footer {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 60px; /* Approximate height of the footer */
-            background: white; /* Match the background color to hide the footer */
-        }
-
+      
       #responseMessage {
           display: none;
           padding: 20px;
@@ -65,11 +47,8 @@
           <!-- I used google form instead of creating of ours for now so later we will finish that up -->
     <div id="googleFormContainer">
         <!-- Google Form Embed Code -->
-      
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfrR8BdVI6IVRT4KGE8yUYjXvQ37BTH8BYC952-GQJ0M0dmyg/viewform?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-        <div class="hidden-footer"></div>
-
-      </div>
+    </div>
     <div id="responseMessage">
         <h2>Thank you for your response!</h2>
         <p>We appreciate your feedback. Your submission has been received.</p>
