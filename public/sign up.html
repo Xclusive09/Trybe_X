@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
+
+    <style>
+      /* Styles for the response message */
+      
+      #responseMessage {
+          display: none;
+          padding: 20px;
+          background-color: #f89410;
+          border: 1px solid #070707;
+          margin-top: 20px;
+      }
+  </style>
+  <script>
+      function showResponseMessage() {
+          document.getElementById('googleFormContainer').style.display = 'none';
+          document.getElementById('responseMessage').style.display = 'block';
+      }
+
+      document.addEventListener('DOMContentLoaded', function() {
+          const iframe = document.querySelector('iframe');
+          iframe.addEventListener('load', function() {
+              const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+              const form = iframeDocument.querySelector('form');
+              if (form) {
+                  form.addEventListener('submit', function() {
+                      setTimeout(showResponseMessage, 1000); // Adjust the timeout if necessary
+                  });
+              }
+          });
+      });
+  </script>
+    <link rel="stylesheet" href="sign.css" />
+    <title>Registraion Form</title>
+  </head>
+  <body>
+          <!-- I used google form instead of creating of ours for now so later we will finish that up -->
+    <div id="googleFormContainer">
+        <!-- Google Form Embed Code -->
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfrR8BdVI6IVRT4KGE8yUYjXvQ37BTH8BYC952-GQJ0M0dmyg/viewform?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+    <div id="responseMessage">
+        <h2>Thank you for your response!</h2>
+        <p>We appreciate your feedback. Your submission has been received.</p>
+    </div>
+          <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfrR8BdVI6IVRT4KGE8yUYjXvQ37BTH8BYC952-GQJ0M0dmyg/viewform?embedded=true" width="640" height="1244" frameborder="0" marginheight="0" marginwidth="0">Trybe Form Loading…</iframe> -->
+          
+    <!-- <script src="./assets/js/sign.js"></script>
+    <script src="../server.js"></script> -->
+  </body>
+</html>
