@@ -330,24 +330,37 @@ body{
   .header {
     margin-top: 0 4px;
   }
-  .section1, .container_side{
-    width: 90%;
-    float: none;
-    margin: 20% 2%;
+  .section1{
+   display: none;
   }
+  
   .form{
-    width: 90%;
+    width: 100%;
     float: none;
-    margin: 20% 2%;
+    margin: 10px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
   }
-  h3{
-  margin-left: 10px;
-  margin-top: -20px;
-  color: #CCA87E;
+  .first{
+    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
   }
-  .about-text{
-    margin-left: 10px;
-    margin-top: 30px;
-    font-weight: 600;
+  #terms{
+    font-size: 12px;
+  }
+  .form-title{
+    font-size: 18px;
+  }
+  input[type=submit]{
+    justify-self: center;
+    align-self: center;
+    margin: auto;
+    font-size: 12px;
+    
+
+
   }
 }

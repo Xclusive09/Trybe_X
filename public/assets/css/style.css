@@ -755,7 +755,9 @@ color: #996448c0;
   background-color: #e97b16;
   display: flex;
 }
-
+.footer-top .container{
+  display: flex;
+}
 .footer-brand {
   margin-block-end: 30px;
 }
@@ -890,58 +892,115 @@ footer-top .container {
    * REUSED STYLE
    */
 
-  .container {
-    max-width: 550px;
-    margin-inline: auto;
-  }
-
+.section{
+  display:block;
+}
   .section-title {
     --fs-3: 3.6rem;
+  }
+
+  /**
+   * HEADER
+   */
+  .logo img{
+    width: 70px;
+    height: 38p;
+  }
+  .header .btn {
+    font-size: 10px;
+    padding: 2px 9px;
+    border-radius: 5px;
+  }
+  .hero-subtitle{
+    font-size: 30px;
+    line-height: 33px;
+  }
+  .hero{
+    margin-top: 100px;
+  }
+  .hero-title{
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .hero-text{
+    font-size: 18px;
+  }
+  .btn{
+    font-size: 11px;
+    padding: 6px 10px;
+    border-radius: 8px;
+  }
+  .hero-banner img{
+    width: 170px;
+    height: 240px;
+  
+  }
+  .about-banner {
+    margin-block-end: 20px;
+    width: 240px;
+    height: 296px;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    display: block;
+  }
+  .about-banner img{
+    width: 240px;
+    height: 286px;
+    justify-content: center;
+    align-items: center;
+  }
+   
+.about .section-title{
+  font-size: 30px;
+  line-height: 33px;
+}
+  .about-content{
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  }
+  .about-text{
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .nav-open-btn ion-icon{
+    width: 20px;
+  }
+  .Objective{
+    display: block;
+    margin: 20px;
+    justify-content: center;
+  align-items: center;
+  margin-left: 0;
+  
+  }
+  .Objective .container{
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    margin-top: -85px;
+  }
+  .objective-subtitle{
+    font-size: 20px;
+    line-height: 23px;
+    display: inline-flex;
   }
   .right{
     float: none;
     margin-top: 2px;
     margin-bottom: 30px;
+    width: 100%;
   }
   .objective-content{
     float: none;
+    width: 100%;
+    
   }
-  .Objective{
-    background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: -280px bottom, center, center;
-  background-size: auto, cover, auto;
-  padding-block-start: 120px;
-  background: #141414;
-  padding-block-end: var(--section-padding);
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  height: 110vh;
-  margin-top: -35px;
-  margin-bottom: 20px;
-  margin-left: 90px;
-  }
-  .objective-subtitle{
-    font-size: 25px;
-    display: inline-flex;
-    line-height: 25px;
-  }
+ 
   .objective-text{
-    font-size: 14px;
-  }
-  /**
-   * HEADER
-   */
-  .logo{
-    width: 80px;
-    height: 24p;
-  }
-  .header .btn {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    margin-inline-start: auto;
-  }
-  .hero{
-    margin-top: 100px;
+    font-size: 12px;
+    font-weight: 400;
   }
   /**
    * ABOUT
@@ -955,10 +1014,50 @@ footer-top .container {
     width: 10%;
   }
   .about-us-content{
-    width: 70%;
-    margin-right: 10px;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+  }
+  .about-us-text{
+    font-size: 13px;
+    font-weight: 400;
+  }
+  .facilities {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+    justify-content: center;
+    align-items: center;
+    display: block;
   }
 
+  .facilities .facilities-col {
+    text-align: left;
+    margin: 20px ;
+    height: 290px;
+  }
+  
+.facilities-col .act-image {
+    width: 175px;
+    border-radius: 10px;
+    height: 250px;
+  }
+  .facilities-col .bg-img #wide {
+    width: 155px;
+    border-radius: 10px;
+    height: 230px;
+  }
+  .facilities .facilities-col .activities{
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .facilities .facilities-col .bg-img{
+    height: 250px;
+    background-color: #141414;
+    border-radius: 10px;
+  }
   /**
    * BLOG
    */
@@ -986,11 +1085,11 @@ footer-top .container {
   }
   .footer-brand,
   .footer-list:not(:last-child) {
-    margin-block-end: 10px;
+    margin-block-end: 5px;
   }
  
   .footer-top .container {
-    display: grid;
+    display: block;
     grid-template-columns: 1fr 1fr;
     gap: 30px 50px;
   }
