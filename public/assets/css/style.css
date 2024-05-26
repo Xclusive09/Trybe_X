@@ -1,14 +1,3 @@
-/*-----------------------------------*\
-  #style.css
-\*-----------------------------------*/
-
-/**
- * copyright 2022 codewithsadee
- */
-
-/*-----------------------------------*\
-  #CUSTOM PROPERTY
-\*-----------------------------------*/
 
 :root {
   /**
@@ -207,9 +196,11 @@ h3 p {
 
 .btn:is(:hover, :focus) {
   background-position: right;
-  
+  background-color: #b87653bd;
 }
-
+.navbar-link:is(:hover, :focus){
+color: #996448c0;
+}
 .w-100 {
   width: 100%;
 }
@@ -278,7 +269,7 @@ h3 p {
 \*-----------------------------------*/
 
 .header .btn {
-  display: none;
+  display: inline-block;
 }
 
 .header {
@@ -344,17 +335,21 @@ h3 p {
   justify-content: space-between;
   align-items: center;
   padding-block: 10px 30px;
+  position: absolute;
+  top: 0;
+  width: 80%;
 }
 
 .navbar-top .logo {
   color: #e97b16;
-  font-size: 4.2rem;
+  font-size: 10px;
   font-weight: var(--fw-700);
+  
 }
 
 .nav-close-btn {
   color: #e97b16;
-  font-size: 35px;
+  font-size: 25px;
   padding: 4px;
 }
 
@@ -482,7 +477,7 @@ h3 p {
   padding-block-start: 120px;
   background:linear-gradient(to right, #272626 10%,#141414 100%);
   padding-block-end: var(--section-padding);
-  clip-path: polygon(0 0, 100% 15%, 100% 85%, 0 100%);
+  clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
   height: 90vh;
 }
 .right{
@@ -511,7 +506,7 @@ h3 p {
   color: #fff;
   font-size: 16px;
   font-weight: 300;
-  margin-block-end: 20px;
+  margin-block-end: 10px;
 }
 
 .clr{
@@ -546,27 +541,11 @@ h3 p {
 
 }
 .about-us-content{
+  margin-top: 30px;
   float: right;
   width: 50%;
 }
-.objective-subtitle {
-  margin-top: -100px;
-  color:#e97b16;
-  font-family: "Montserrat", sans-serif;
-  font-weight: bolder;
-  font-size: 52px;
-  margin-block-end: 15px;
-  line-height: 54px;
-  text-align: center;
-  
-}
-.objective-content{
-  float: left;
-  width: 60%;
-  margin-top: -30px;
-}
-
-.objective-text {
+.about-us-text {
   color: #fff;
   font-size: 16px;
   font-weight: 300;
@@ -753,18 +732,6 @@ h3 p {
   --ionicon-stroke-width: 35px;
 }
 
-.publish-date,
-.comment {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.comment {
-  color: inherit;
-  margin-inline-start: auto;
-}
-
 /*-----------------------------------*\
   #FOOTER
 \*-----------------------------------*/
@@ -772,6 +739,7 @@ h3 p {
 .footer {
   font-size: var(--fs-8);
   background-color: #e97b16;
+  display: grid;
 }
 
 .footer a {
@@ -785,6 +753,7 @@ h3 p {
   background-position: center, center;
   color: var(--white);
   background-color: #e97b16;
+  display: flex;
 }
 
 .footer-brand {
@@ -809,6 +778,10 @@ h3 p {
   align-items: center;
   gap: 10px;
   color: #000;
+  margin-left: -10px;
+}
+.social-list li{
+  padding-bottom: 5px;
 }
 
 .footer-top .social-link {
@@ -827,7 +800,11 @@ h3 p {
 .footer-list:not(:last-child) {
   margin-block-end: 25px;
 }
-
+footer-top .container {
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  gap: 20px 30px;
+}
 .footer-list-title {
   font-family: var(--ff-source-sans-pro);
   font-size: var(--fs-5);
@@ -908,7 +885,7 @@ h3 p {
  * responsive for larger than 550px screen
  */
 
-@media (min-width: 550px) {
+@media (max-width: 550px) {
   /**
    * REUSED STYLE
    */
@@ -921,24 +898,65 @@ h3 p {
   .section-title {
     --fs-3: 3.6rem;
   }
-
+  .right{
+    float: none;
+    margin-top: 2px;
+    margin-bottom: 30px;
+  }
+  .objective-content{
+    float: none;
+  }
+  .Objective{
+    background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: -280px bottom, center, center;
+  background-size: auto, cover, auto;
+  padding-block-start: 120px;
+  background: #141414;
+  padding-block-end: var(--section-padding);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  height: 110vh;
+  margin-top: -35px;
+  margin-bottom: 20px;
+  margin-left: 90px;
+  }
+  .objective-subtitle{
+    font-size: 25px;
+    display: inline-flex;
+    line-height: 25px;
+  }
+  .objective-text{
+    font-size: 14px;
+  }
   /**
    * HEADER
    */
-
+  .logo{
+    width: 80px;
+    height: 24p;
+  }
   .header .btn {
     display: flex;
     align-items: center;
     gap: 5px;
     margin-inline-start: auto;
   }
-
+  .hero{
+    margin-top: 100px;
+  }
   /**
    * ABOUT
    */
-
-  .stats-list {
-    grid-template-columns: repeat(3, 1fr);
+  .facilities-col, .act-image{
+    width: 80%;
+  }
+  .about-us{
+    display: none;
+    float: none;
+    width: 10%;
+  }
+  .about-us-content{
+    width: 70%;
+    margin-right: 10px;
   }
 
   /**
@@ -963,12 +981,14 @@ h3 p {
   /**
    * FOOTER
    */
-
+  .social-list{
+    display: flex;
+  }
   .footer-brand,
   .footer-list:not(:last-child) {
-    margin-block-end: 0;
+    margin-block-end: 10px;
   }
-
+ 
   .footer-top .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -984,7 +1004,7 @@ h3 p {
   /**
    * REUSED STYLE
    */
-
+  
   .container {
     max-width: 720px;
   }
@@ -1241,13 +1261,44 @@ h3 p {
   border-radius: 10px;
   margin-bottom: 5%;
   text-align: left;
+  margin: 5% 10px;
+  height: 450px;
+  background-color: #B0511C;
+  padding-top: 4px;
 }
 
 .facilities-col img {
   width: 100%;
   border-radius: 10px;
 }
-
+.activities{
+  color: #141414;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  padding-top: 5px;
+}
+.act-image{
+  width: 298px;
+  height: 400px;
+}
+.act-image-long{
+  width: 298px;
+  height: 320px;
+}
+#img1{
+  padding-top: 60px;
+}
+#wide{
+  width: 250px;
+  height: 360px;
+  padding-top: 40px;
+}
+.bg-img{
+  height: 400px;
+  background-color: #141414;
+  border-radius: 10px;
+}
 .wrapper .title {
   text-align: center;
 }
@@ -1263,7 +1314,6 @@ h3 p {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 15px;
   text-transform: uppercase;
-  backdrop-filter: blur(15px);
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   word-wrap: break-word;
 }
@@ -1274,13 +1324,13 @@ h3 p {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin: 40px 0;
+  margin: 30px 0;
 }
 
 .card_Container .card {
   position: relative;
-  width: 300px;
-  height: 400px;
+  width: 210px;
+  height: 260px;
   margin: 20px;
   overflow: hidden;
   box-shadow: 0 30px 30px -20px rgba(0, 0, 0, 1),

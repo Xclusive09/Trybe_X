@@ -9,8 +9,13 @@
       integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="sign.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
-
+    <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet"
+  />
     <style>
       /* Styles for the response message */
       
@@ -23,40 +28,159 @@
       }
   </style>
   <script>
-      function showResponseMessage() {
-          document.getElementById('googleFormContainer').style.display = 'none';
-          document.getElementById('responseMessage').style.display = 'block';
-      }
+        
+      function showOtherInput() {
+            var selectBox = document.getElementById('technicalSkill');
+            var otherSkill = document.getElementById('other-skill');
+            if (selectBox.value === 'other') {
+                otherSkill.style.display = 'block';
+            } else {
+                otherSkill.style.display = 'none';
+            }
+        }
 
-      document.addEventListener('DOMContentLoaded', function() {
-          const iframe = document.querySelector('iframe');
-          iframe.addEventListener('load', function() {
-              const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-              const form = iframeDocument.querySelector('form');
-              if (form) {
-                  form.addEventListener('submit', function() {
-                      setTimeout(showResponseMessage, 1000); // Adjust the timeout if necessary
-                  });
-              }
-          });
-      });
   </script>
-    <link rel="stylesheet" href="sign.css" />
     <title>Registraion Form</title>
   </head>
   <body>
-          <!-- I used google form instead of creating of ours for now so later we will finish that up -->
-    <div id="googleFormContainer">
-        <!-- Google Form Embed Code -->
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfrR8BdVI6IVRT4KGE8yUYjXvQ37BTH8BYC952-GQJ0M0dmyg/viewform?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-    </div>
-    <div id="responseMessage">
+          
+    <div id="responseMessage"> 
         <h2>Thank you for your response!</h2>
         <p>We appreciate your feedback. Your submission has been received.</p>
-    </div>
-          <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfrR8BdVI6IVRT4KGE8yUYjXvQ37BTH8BYC952-GQJ0M0dmyg/viewform?embedded=true" width="640" height="1244" frameborder="0" marginheight="0" marginwidth="0">Trybe Form Loading…</iframe> -->
+    </div>  
           
     <!-- <script src="./assets/js/sign.js"></script>
     <script src="../server.js"></script> -->
+    <header class="header" data-header>
+        <div class="container">
+          <div class="overlay" data-overlay></div>
+  
+          <a href="#">
+            <h1 class="logo">
+              <img
+                src="./assets/images/Component 3.png"
+                width="169"
+                height="34"
+                alt="hero-banner"
+              />
+            </h1>
+          </a>
+  
+          <nav class="navbar" data-navbar>
+            <div class="navbar-top">
+              <a href="#" class="logo"
+                ><img
+                  src="./assets/images/Component 3.png"
+                  width="90"
+                  height="24"
+                  alt="hero-banner"
+              /></a>
+  
+              <button
+                class="nav-close-btn"
+                aria-label="Close Menu"
+                data-nav-close-btn
+              >
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
+            </div>
+  
+            <ul class="navbar-list">
+              <li class="navbar-item">
+                <a href="/public/index.html" class="navbar-link" data-navbar-link>Home</a>
+              </li>
+  
+              <li class="navbar-item">
+                <a href="/public/index.html/#objective" class="navbar-link" data-navbar-link
+                  >Our Programs</a
+                >
+              </li>
+  
+              <li class="navbar-item">
+                <a href="/public/events.html" class="navbar-link" data-navbar-link>Events</a>
+              </li>
+  
+              <li class="navbar-item">
+                <a href="/public/blogs.html" class="navbar-link" data-navbar-link>Blogs</a>
+              </li>
+  
+              <li class="navbar-item">
+                <a href="/public/index.html/#about-us" class="navbar-link" data-navbar-link
+                  >About Us</a
+                >
+              </li>
+            </ul>
+          </nav>
+  
+          <a href="./sign up.html" class="btn">
+           <span>Join Us</span>
+          </a>
+  
+          <button class="nav-open-btn" aria-label="Open Menu" data-nav-open-btn>
+            <ion-icon name="menu-outline"></ion-icon>
+          </button>
+        </div>
+      </header>
+  
+
+    <section class="section1">
+        <div class="container_side">
+            <h2 class="section-title">
+                Join trybe-X 
+            </h2>
+            <h3 class="section-subtitle">
+                Let’s build a <br>greater future together
+            </h3>
+            <p class="about-text">
+                You are one step away from <br>Joining the cool guys trybe on campus
+              </p>
+    </div>   
+    </section>
+          <div class="form">
+            <h2 class="form-title"> Sign Up</h2>
+            <form class="first" action="" method="post"> 
+            <div class="name"><input type="text" id="fullname" placeholder="Full Name" required>
+            </div>
+            <div class="email"><input type="email" id="email" placeholder="E-mail Address" required></div>     
+            <div class="course"><input type="text" id="courseOfStudy" placeholder="Course of study" required></div>
+            <div class="level/Skill">
+                <select id="level" name="level" title="level" required>
+                    <option value="placeholder" selected disabled >level/year</option>
+                    <option value="level1">100 Level</option>
+                    <option value="level2">200 Level</option>
+                    <option value="level3">300 Level</option>
+                    <option value="level4">400 Level</option>
+                </select>
+                <select id="technicalSkill" name="skill" title="skill" required>
+                    <option value="placeholder" selected disabled >Techinical skill</option>
+                    <option value="web-dev">Web Development</option>
+                    <option value="mobile-dev">Mobile Development</option>
+                    <option value="data-science">Data Science</option>
+                    <option value="cybersecurity">Cybersecurity</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="other-skill" id="other-skill">
+                <label for="other-skill-input">Please specify:</label>
+                <input type="text" id="other-skill-input" name="other-skill-input" placeholder="Other skill you have">
+            </div>
+            <div class="interest"><select id="areaOfInterest" name="interest" title="interest" required>
+                <option value="placeholder" selected disabled >Area of interest</option>
+                <option value="web-dev">Web Development</option>
+                <option value="mobile-dev">Mobile Development</option>
+                <option value="data-science">Data Science</option>
+                <option value="cybersecurity">Cybersecurity</option>
+            </select></div>
+            <div class="reason"> <textarea name="reason" id="ReasonToJoin" cols="30" rows="10"
+                placeholder="Why do you want to join Trybe-X" required></textarea>
+            </div>
+             <div class="checkbox-container">
+            <input type="checkbox" id="terms" name="terms"  required><label for="terms" class="checkbox-label" id="terms"><a href="#">I agree to the terms and conditions</a></label></p>
+            </div>
+
+            <input type="submit" value="Submit" id="submit">
+            </form>
+        </div>
+        <div class="clr"></div>
   </body>
 </html>

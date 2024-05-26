@@ -1,0 +1,34 @@
+.center-none{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+}
+.img-center{
+ opacity: 0.2;
+ z-index: 1;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.text{
+font-family: "Nanum Pen Script", cursive;
+font-weight: bolder;
+font-size: 102px;
+color: #cca87e6c;
+position: absolute;
+top: 50%;
+}
+@media (max-width:550px) {
+.img-center img{
+    width: 300px;
+    height: 300px;
+}
+#wider{
+    width: 450px;
+    height: 300px;
+}
+.text{
+    font-size: 50px;
+}
+}
