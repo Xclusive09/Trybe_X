@@ -10,12 +10,15 @@
  display: flex;
  justify-content: center;
  align-items: center;
+ margin: 0;
+ padding: 0;
 }
 .text{
 font-family: "Nanum Pen Script", cursive;
 font-weight: bolder;
 font-size: 102px;
-color: #cca87e6c;
+left: 18%;
+color: #cca87e6b;
 position: absolute;
 top: 50%;
 }
@@ -23,18 +26,14 @@ top: 50%;
 .img-center img{
     width: 300px;
     height: 300px;
-}
-.nav-open-btn ion-icon{
-    display: block;
-    width: 20px;
   }
 #wider{
     width: 450px;
     height: 300px;
 }
 .text{
-    font-size: 50px;
-    text-align: center;
-    width: 100%;
+    font-size: 40px;
+    width: 70%;
+    left: -15%;
 }
 }

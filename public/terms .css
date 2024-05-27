@@ -1,0 +1,34 @@
+body{
+    background-color:#864203; 
+}
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color:#864203;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; 
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+    display: none;
+  }
+  .overlay-content {
+    font-family: "Montserrat", sans-serif;
+    background-color: #864203;
+    padding: 5%;
+    text-align: left;
+    position: relative;
+  }
+  .topic{
+    font-size: 30px;
+    font-weight:900 ;
+  }
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    background-color:#864203;
+  }
