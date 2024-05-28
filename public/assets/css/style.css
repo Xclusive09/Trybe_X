@@ -731,6 +731,9 @@ color: #996448c0;
   font-size: 22px;
   --ionicon-stroke-width: 35px;
 }
+.mail{
+  margin-top: 8px;
+}
 
 /*-----------------------------------*\
   #FOOTER
